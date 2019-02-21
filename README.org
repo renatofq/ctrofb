@@ -1,0 +1,2 @@
+ctrofr, stands for ctr of renato, is a command line client for containerd
+written for learning/sandboxing porpouses.
