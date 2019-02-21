@@ -49,6 +49,10 @@ func netRunner(cmd *cobra.Command, args []string) {
 		fmt.Printf("Config of interface %s: %v\n",
 			name, config)
 	}
+
+	if err := task.Start(rootCtx); err != nil {
+		log.Fatalf("Fail to start task: %v\n", err)
+	}
 }
 
 func getNetns(pid uint32) string {

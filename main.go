@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/renatofq/catraia/cmd"
+	"github.com/renatofq/ctrofr/cmd"
 )
 
 func main() {

@@ -14,7 +14,7 @@ var (
 	rootCtx context.Context
 )
 
-var rootCmd = &cobra.Command{ Use: "catraia" }
+var rootCmd = &cobra.Command{ Use: "ctrofr" }
 
 func init() {
 	c, err := containerd.New("/run/containerd/containerd.sock")
@@ -26,7 +26,9 @@ func init() {
 
 	rootCtx = namespaces.WithNamespace(context.Background(), "default")
 
+	rootCmd.AddCommand(createCmd)
 	rootCmd.AddCommand(infoCmd)
+	rootCmd.AddCommand(specCmd)
 	rootCmd.AddCommand(netCmd)
 }
 
